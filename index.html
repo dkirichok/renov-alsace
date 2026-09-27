@@ -1,0 +1,1770 @@
+<!doctype html>
+<html class="scroll-smooth" lang="ru" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RenovAlsace | Профессиональный ремонт и клининг в Эльзасе</title>
+    <meta
+      content="One tradesperson for all your plumbing, painting, tiling, and cleaning needs in Alsace. Free quote within 24 hours."
+      name="description"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ffdbca",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#374765",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#293342",
+              "tertiary-fixed-dim": "#bdc7db",
+              "on-primary-fixed-variant": "#783200",
+              "primary-fixed-dim": "#ffb690",
+              "inverse-primary": "#ffb690",
+              "surface-tint": "#9d4300",
+              "on-secondary-fixed": "#091b37",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#e0c0b1",
+              "tertiary-fixed": "#d9e3f7",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#b7c7eb",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#121c2a",
+              secondary: "#4f5e7e",
+              "inverse-on-surface": "#f0f1f2",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "surface-container-highest": "#e1e3e4",
+              "on-surface-variant": "#584237",
+              surface: "#f8f9fa",
+              "on-secondary-container": "#505f7f",
+              "tertiary-container": "#919bae",
+              "primary-container": "#f97316",
+              "on-surface": "#191c1d",
+              "on-tertiary-fixed-variant": "#3d4757",
+              tertiary: "#555f70",
+              background: "#f8f9fa",
+              "surface-container": "#edeeef",
+              "surface-container-high": "#e7e8e9",
+              "on-primary-fixed": "#341100",
+              "surface-bright": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#d7e2ff",
+              "secondary-container": "#cadaff",
+              "surface-container-low": "#f3f4f5",
+              "on-primary-container": "#582200",
+              outline: "#8c7164",
+              "surface-dim": "#d9dadb",
+              "on-error": "#ffffff",
+              "on-background": "#191c1d",
+              primary: "#9d4300",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              gutter: "24px",
+              "section-gap": "80px",
+              "margin-desktop": "48px",
+              "container-max": "1280px",
+              base: "8px",
+              "margin-mobile": "16px",
+            },
+            fontFamily: {
+              "headline-md": ["Inter"],
+              "display-lg": ["Inter"],
+              "body-md": ["Source Sans 3"],
+              "headline-lg": ["Inter"],
+              "display-lg-mobile": ["Inter"],
+              "body-lg": ["Source Sans 3"],
+              "label-md": ["Inter"],
+            },
+            fontSize: {
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Scroll-triggered motion */
+      html.js-motion .reveal-on-scroll {
+        opacity: 0;
+        transform: translate3d(0, 28px, 0);
+        transition:
+          opacity 380ms cubic-bezier(0.4, 0, 0.2, 1),
+          transform 380ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: var(--reveal-delay, 0ms);
+        will-change: opacity, transform;
+      }
+      html.js-motion .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        will-change: auto;
+      }
+      html.js-motion .reveal-from-left {
+        transform: translate3d(-32px, 0, 0);
+      }
+      html.js-motion .reveal-from-right {
+        transform: translate3d(32px, 0, 0);
+      }
+      html.js-motion .reveal-from-left.is-visible,
+      html.js-motion .reveal-from-right.is-visible {
+        transform: translate3d(0, 0, 0);
+      }
+      #scrollProgress {
+        position: fixed;
+        inset: 0 auto auto 0;
+        width: 0;
+        height: 3px;
+        z-index: 100;
+        background: #f97316;
+        pointer-events: none;
+        transition: width 80ms linear;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto !important;
+        }
+        html.js-motion .reveal-on-scroll,
+        html.js-motion .reveal-from-left,
+        html.js-motion .reveal-from-right {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        #scrollProgress {
+          display: none;
+        }
+      }
+
+      .hero-entrance {
+        animation: heroEntrance 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .hero-entrance .hero-badge {
+        animation: heroPop 480ms cubic-bezier(0.16, 1, 0.3, 1) 80ms both;
+      }
+      .hero-entrance h1 {
+        animation: heroSlide 650ms cubic-bezier(0.16, 1, 0.3, 1) 130ms both;
+      }
+      .hero-entrance p {
+        animation: heroSlide 550ms cubic-bezier(0.16, 1, 0.3, 1) 230ms both;
+      }
+      .hero-entrance .hero-actions {
+        animation: heroSlide 550ms cubic-bezier(0.16, 1, 0.3, 1) 320ms both;
+      }
+      .hero-entrance .hero-proof > div {
+        animation: heroSlide 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .hero-entrance .hero-proof > div:nth-child(2) {
+        animation-delay: 420ms;
+      }
+      .hero-entrance .hero-proof > div:nth-child(3) {
+        animation-delay: 500ms;
+      }
+      .hero-entrance h1 span {
+        display: inline;
+        animation: heroAccent 700ms ease-out 350ms both;
+      }
+      @keyframes heroEntrance {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes heroSlide {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 24px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes heroPop {
+        from {
+          opacity: 0;
+          transform: translate3d(-18px, 0, 0) scale(0.94);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+      }
+      @keyframes heroAccent {
+        from {
+          filter: brightness(0.7);
+        }
+        to {
+          filter: brightness(1);
+        }
+      }
+      #galleryTrack {
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+      #galleryTrack > [data-gallery-slide] {
+        scroll-snap-align: start;
+      }
+      #galleryDots button {
+        transition:
+          width 180ms ease,
+          background-color 180ms ease;
+      }
+      #galleryDots button[aria-current="true"] {
+        width: 32px;
+        background: #f97316;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-entrance,
+        .hero-entrance *,
+        .hero-entrance h1 span {
+          animation: none !important;
+        }
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      .service-card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px -10px rgba(27, 43, 72, 0.15);
+      }
+      body {
+        background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+        background-size: 24px 24px;
+        background-color: #f8f9fa;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-blur: 8px;
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 1rem;
+      }
+    </style>
+    <style class="">
+      #gallery .flex.overflow-x-auto {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      #gallery .flex.overflow-x-auto::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <style id="mobile-responsive-fixes">
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: clip;
+      }
+      img,
+      video,
+      iframe {
+        max-width: 100%;
+      }
+      @media (max-width: 767px) {
+        header nav {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+        main > section:not(:first-child) .max-w-container-max,
+        footer .max-w-container-max {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+        main > section:first-child {
+          min-height: 680px;
+        }
+        main > section:first-child .max-w-container-max {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+        main > section:first-child h1 {
+          font-size: clamp(2.1rem, 9vw, 3rem);
+          line-height: 1.12;
+          overflow-wrap: anywhere;
+        }
+        main > section:first-child .hero-actions {
+          width: 100%;
+          align-items: stretch;
+        }
+        main > section:first-child .hero-actions a {
+          justify-content: center;
+          width: 100%;
+          padding: 14px 18px;
+        }
+        main > section:first-child .hero-proof {
+          gap: 12px 18px;
+          margin-top: 28px;
+          padding-top: 22px;
+        }
+        #services .grid {
+          gap: 18px;
+        }
+        #services .service-card-hover {
+          min-height: 280px;
+        }
+        #galleryTrack {
+          gap: 14px;
+          padding-left: 1px;
+          padding-right: 16px;
+          scroll-padding-left: 1px;
+          overscroll-behavior-x: contain;
+          -webkit-overflow-scrolling: touch;
+        }
+        #galleryTrack > [data-gallery-slide] {
+          flex: 0 0 84%;
+          width: 84%;
+          min-width: 0 !important;
+          min-height: 360px;
+          height: 360px;
+          scroll-snap-align: start;
+        }
+        #gallery .max-w-container-max {
+          min-width: 0;
+        }
+        #galleryDots {
+          max-width: min(48vw, 240px);
+          overflow-x: auto;
+          padding: 8px 2px;
+        }
+        #galleryDots button {
+          flex: 0 0 auto;
+          min-width: 8px;
+          min-height: 6px;
+        }
+        #gallery .mt-8[aria-label="Gallery controls"] {
+          gap: 10px;
+        }
+        #galleryPrev,
+        #galleryNext {
+          width: 42px;
+          height: 42px;
+          flex: 0 0 42px;
+        }
+        #request-form input,
+        #request-form select,
+        #request-form textarea {
+          font-size: 16px;
+        }
+        #request-form .grid.grid-cols-2 {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        #contact .grid {
+          gap: 12px;
+        }
+        .modal {
+          padding: 72px 12px 24px;
+        }
+        .modal-content {
+          max-width: 100%;
+          max-height: 70vh;
+          object-fit: contain;
+        }
+        .modal .absolute.top-10.right-10 {
+          top: 12px;
+          right: 18px;
+          font-size: 44px;
+        }
+      }
+      @media (max-width: 380px) {
+        #galleryTrack > [data-gallery-slide] {
+          flex-basis: 90%;
+          width: 90%;
+        }
+        main > section:first-child .hero-badge {
+          font-size: 10px;
+          letter-spacing: 0.08em;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-on-background font-body-md antialiased">
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20"
+    >
+      <nav
+        class="max-w-container-max mx-auto px-margin-desktop h-full flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <span
+            class="font-headline-md text-headline-md font-bold text-on-secondary-fixed"
+            >RenovAlsace</span
+          >
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+            href="#services"
+            >Наши услуги</a
+          >
+          <a
+            class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+            href="#gallery"
+            >Работы</a
+          >
+          <a
+            class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+            href="#why-us"
+            >Почему мы</a
+          >
+          <a
+            class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+            href="#areas"
+            >Регионы</a
+          >
+          <a
+            class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+            href="#contact"
+            >Контакты</a
+          >
+        </div>
+        <div
+          id="mobileNav"
+          class="hidden md:hidden absolute top-20 left-0 right-0 bg-white border-b border-outline-variant/30 shadow-lg p-4 flex-col gap-1"
+          aria-label="Mobile navigation"
+        >
+          <a
+            class="block rounded-lg px-4 py-3 text-secondary hover:bg-surface-container-low"
+            href="#services"
+            >Наши услуги</a
+          >
+          <a
+            class="block rounded-lg px-4 py-3 text-secondary hover:bg-surface-container-low"
+            href="#gallery"
+            >Работы</a
+          >
+          <a
+            class="block rounded-lg px-4 py-3 text-secondary hover:bg-surface-container-low"
+            href="#why-us"
+            >Почему мы</a
+          >
+          <a
+            class="block rounded-lg px-4 py-3 text-secondary hover:bg-surface-container-low"
+            href="#areas"
+            >Регионы</a
+          >
+          <a
+            class="block rounded-lg px-4 py-3 text-secondary hover:bg-surface-container-low"
+            href="#contact"
+            >Контакты</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden sm:flex items-center gap-2 border border-outline-variant/50 rounded-full px-3 py-1 bg-surface-container-low"
+          >
+            <button
+              class="text-[10px] font-bold text-primary-container px-1 transition-colors"
+            >
+              RU
+            </button>
+            <div class="w-[1px] h-3 bg-outline-variant/50"></div>
+            <button
+              class="text-[10px] font-bold text-secondary hover:text-primary-container px-1 transition-colors"
+            >
+              FR
+            </button>
+            <div class="w-[1px] h-3 bg-outline-variant/50"></div>
+            <button
+              class="text-[10px] font-bold text-secondary hover:text-primary-container px-1 transition-colors"
+            >
+              DE
+            </button>
+          </div>
+          <button
+            id="mobileMenuToggle"
+            type="button"
+            class="md:hidden material-symbols-outlined text-on-surface p-2"
+            data-icon="menu"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            menu
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="pt-24 pb-8">
+      <!-- Section 1: Welcome Screen -->
+      <section
+        class="relative min-h-[700px] md:min-h-[820px] flex items-center overflow-hidden -mt-24 pt-24"
+      >
+      
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover"
+            alt="Modern home renovation in Alsace with artisan at work"
+            src="./hero.jpg"
+          />
+          <!-- src="https://lh3.googleusercontent.com/aida/AEtjO1VpiKpXKpkD8dXa7zL8Y_8ndAyl1q2GBXyHJnRU-2uAdB89fdsgydPRY1UhIvfZwmFxsjzxKxKF7bhuM_oRttMe89HbpdYHWMfdlB-dXy_ArsmcvoEG_8nKxyUHyww53qNIVHuAKV8vNgz0Xz1ZTFQssziQVI9jvNK1qinf2aEuh3ro-GGUEvnWn0RnsnT9-VHN7Kn6uIba-hs-yvfSAngLalY3sLj1PLHN7T15wP3ADStx0kTeJh6jHp0" -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/20"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full py-16 md:py-24"
+        >
+          <div class="max-w-2xl text-white">
+            <div
+              class="inline-flex hero-badge items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-primary-fixed text-xs font-semibold uppercase tracking-wider mb-6"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-primary-container animate-pulse"
+              ></span>
+              Лучшие в Эльзасе
+            </div>
+            <h1
+              class="font-headline-lg text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-white"
+            >
+              Ремонт и клининг в Эльзасе -
+              <span class="text-primary-fixed block sm:inline font-bold"
+                >один мастер, полный порядок!</span
+              >
+            </h1>
+            <p
+              class="font-body-lg text-base md:text-lg text-surface-bright/90 mb-8 leading-relaxed max-w-xl"
+            >
+              Сантехнические работы, малярные работы, укладка плитки, уборка
+              после ремонта, химчистка. Бесплатный расчет стоимости в течение 24
+              часов.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 hero-actions">
+              <a
+                href="#request-form"
+                class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary-container text-white font-headline-md font-semibold text-base hover:bg-primary transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 active:scale-[0.98]"
+                >Отправить запрос
+                <span class="material-symbols-outlined text-lg"
+                  >arrow_forward</span
+                ></a
+              ><a
+                href="#services"
+                class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 backdrop-blur-md text-white font-headline-md font-semibold text-base hover:bg-white/20 transition-all duration-300 border border-white/20"
+                >Наши услуги</a
+              >
+            </div>
+            <div
+              class="mt-12 pt-8 border-t border-white/20 flex flex-wrap gap-8 items-center text-xs md:text-sm text-surface-bright/80 hero-proof"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-primary-fixed text-base"
+                  >verified</span
+                ><span class="">Бесплатная смета</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-primary-fixed text-base"
+                  >schedule</span
+                ><span class="">Точные сроки</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-primary-fixed text-base"
+                  >shield</span
+                ><span class="">Гарантия на работы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: Our Services -->
+      <section class="py-section-gap" id="services">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+              Наши услуги
+            </h2>
+            <div
+              class="h-1.5 w-20 bg-primary-container mx-auto rounded-full"
+            ></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Professional plumbing installation in Alsace"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYg78TkdsUrYHNs6D9k67q0wWTDdxjKRh203g_1Enoq8c6BEd7bx3OPBVVkwVmZCgL8dsOouSWMg5SQhSHBWgcZIk_FNPYGcoe2d0WADdasL7PWICTaEox7ndSnM5qBbPGs7n8VQd-tUu6DTghwa4LSTjoRx5qYcYb1Lg7F7yPdgAr28LbFWLb7-2rR2iIchT3ikYN4De_nrtebRvdKw_GZ4m4wCPhiiaSWXz1k7ed5LHg6lRvmvhVJm06dWEhpTPjaBqDKIo_RXWUtw"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="plumbing"
+                  >plumbing</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Сантехнические работы любой сложности
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Замена смесителей, кранов, унитазов, устранение протечек и
+                  установка умывальников.
+                </p>
+              </div>
+            </div>
+            <!-- Service 2: Painting & Wallpapering -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Painting &amp; Wallpapering"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7vx0j0r6Jd1ynSq8Ud652r5YK0fOQlOG3L0FxpQh1kOitFuMK7Tca1G_iL3usV_fpfpuAZK_lYklUVZE2DRh9wKR7lEgC9WgVHsV6CBoXR_7cbzeTxLzEnuLqNMwFvUqd44cgw9PBLw7GSjI0v4Kcwg1vz3LVDXgpVw1RE0wDqXyQjXE4PKRoZFza1_OfRYMSARKJv3zFB7c8tkypsUFybBRm1x2sFc62WZYzbmhh87RiwhMVRXRKa4coqO8qP-06Mz2amFr3DY"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="format_paint"
+                  >format_paint</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Покраска стен, поклейка обоев
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Профессиональная подготовка поверхностей, качественная
+                  покраска и поклейка обоев.
+                </p>
+              </div>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Tiling"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlYL8rZnHZsbLjmeFRqUwj-onmsUZB8DVGi5E7toqWmvRoY4lyaG4BLX64sVgdPdHWEBm-m7r83k-U8SWGUfUCbMBw-mIP2o7V3lqbO8JFY_jJbw3pUQxC8RPuEPFgfWKP-6ESktr9ODZY70u7CBfDhXU-vYintWdBbRrSMjLLKhkjzpfYfZ68ORi7Wg_K0l5HWeM2Rp3nNAVtkbVHt1sAeJftsF8ynsDru6yRYFAjGdNvvf0MiNM7kqG_fObmHCPhoZcdY7q0uGs"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="grid_view"
+                  >grid_view</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Укладка плитки и напольных покрытий
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Укладка плитки (на стены, на пол), замена плинтусов и мелкий
+                  ремонт.
+                </p>
+              </div>
+            </div>
+            <!-- Service 4 -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Minor Construction"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt7FsqdlJOF-a_Kt3Mm_5bfFkGO_Ptdlp1HD5Jfu_D8Jr1dTxxlaFg7cu6We9kFddmvhjysiQWfMYZEjccnQGsDK5uqnhUNPZ4ZwLh1DXXaym0rFsj07ncKD_BCI54UKad-i_3NLZyULCEEb3tG3RzcyYgiST33RCc8zRjdtZz0Hu8QAb6YalndopL9JTyRk-YoitofevzyTN74_eEWQGSCbNm6M2gPl5vD4ABJC0vsFTgPo9WP_tYgtf9661XpZQXdBrAUvLLPDI"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="construction"
+                  >construction</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Небольшие строительные работы
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Замена труб, подготовка помещения к ремонту, демонтаж старой
+                  отделки.
+                </p>
+              </div>
+            </div>
+            <!-- Service 5 -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Cleaning"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-N2B6zi7qa9-xcxCDaggUzebGQ-JR0jD8eTOGT9cUxR4zFVTnwH9dVnriAHpsc6r7e_17QGcoMo79eeb29pkFdKgv0xVGx2U4LGtX5wq-91a7UzanC68JJnvJ8rf2dsb_vdHirCHJNzpp2SFfSyKoGvesuxuBDjKEpJxwrFVJuWRxFPkBUQ_a-F3CJzh0xtsjD-DqQf-3--qoqH1AWcetXNQC_ywY2KLC-aU3_XEpuzACpMvBqRvSM0qTWXZ8ZgjjHixLLCBm_-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="cleaning_services"
+                  >cleaning_services</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Уборка после ремонтных работ
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Глубокая уборка после ремонта: удаление пыли, мытье полов,
+                  профессиональная дезинфекция.
+                </p>
+              </div>
+            </div>
+            <!-- Service 6 -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm service-card-hover transition-all duration-300 h-80 flex flex-col justify-between p-6"
+            >
+              <img
+                alt="Dry Cleaning"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBagBiwPMCe0afijwJfyPsFw8ONXLiwhZTe2dBCANOlEyjJ84TZDa8qO8KEip_c223c7Hgr2OGMarT9BZwJCcyhwWoPnYIHFvP0aqlcamfb0gvGd6LVYkfsWzSc5ptzsi9LHWCI0xrBbLQaYnDhsNzNqbYQhXnbGUuSpcsvZwv6ztHQnos2QAzaxsscr4k-O7bNnloVrthsrIREt4p_hkaY_K91OaRZyCrFrHf3nU_IWzowjBdF3oZOZ3fTdubNu_xkNze3giwg_BI"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+              <div
+                class="relative z-10 w-12 h-12 bg-primary-container flex items-center justify-center rounded-xl shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-2xl"
+                  data-icon="sanitizer"
+                  >sanitizer</span
+                >
+              </div>
+              <div class="relative z-10">
+                <h3 class="font-headline-md text-headline-md text-white mb-2">
+                  Химчистка мебели и ковров
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Профессиональная чистка диванов, ковров и мягкой мебели,
+                  паровая обработка.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3: Project Gallery (Grid) -->
+      <section
+        class="relative w-full bg-surface-container-low border-y border-outline-variant/30 overflow-hidden py-16 md:py-24"
+      >
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div
+            class="relative overflow-hidden rounded-3xl bg-primary-container shadow-xl border border-white/20"
+          >
+            <div
+              class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10 p-10 md:p-12"
+            >
+              <div class="lg:col-span-7 flex flex-col items-start">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-wider mb-4"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-white animate-pulse"
+                  ></span
+                  >Новинка
+                </div>
+                <h2
+                  class="font-headline-lg text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight mb-3 leading-snug"
+                >
+                  Современные натяжные потолки
+                  <span class="text-primary-fixed block sm:inline font-normal"
+                    >и установка контурного освещения</span
+                  >
+                </h2>
+                <p
+                  class="font-body-md text-white/90 text-sm md:text-base mb-6 max-w-xl leading-relaxed"
+                >
+                  Преобразите своё жилое пространство с помощью безупречной, бесшовной отделки потолка с возможностью встроенного архитектурного освещения, которое устанавливается всего за 1-2 дня без лишней пыли и грязи.
+                </p>
+                <div class="flex flex-wrap gap-2 md:gap-3 mb-6">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-md text-white text-xs font-medium border border-white/20"
+                    ><span
+                      class="material-symbols-outlined text-primary-fixed text-sm"
+                      >check_circle</span
+                    >
+                    Бесшовная отделка</span
+                  ><span
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-md text-white text-xs font-medium border border-white/20"
+                    ><span
+                      class="material-symbols-outlined text-primary-fixed text-sm"
+                      >lightbulb</span
+                    >
+                    Возможность контурного освещения</span
+                  ><span
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-md text-white text-xs font-medium border border-white/20"
+                    ><span
+                      class="material-symbols-outlined text-primary-fixed text-sm"
+                      >bolt</span
+                    >
+                    Быстрая установка</span
+                  >
+                </div>
+                <div class="flex flex-wrap items-center gap-4">
+                  <a
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-white font-headline-md text-sm font-semibold hover:bg-on-background transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                    href="#request-form"
+                    >Получить рассчёт стоимости
+                    <span class="material-symbols-outlined text-base"
+                      >arrow_forward</span
+                    ></a
+                  ><span
+                    class="text-xs text-white/90 font-medium flex items-center gap-1"
+                    ><span
+                      class="material-symbols-outlined text-white text-base"
+                      >verified</span
+                    >
+                    Бесплатная консультация</span
+                  >
+                </div>
+              </div>
+              <div class="lg:col-span-5 relative">
+                <div
+                  class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 group"
+                >
+                  <img
+                    alt="High-end stretch ceiling installation with subtle LED lighting in Alsace"
+                    class="w-full sm:h-64 object-cover transition-transform duration-700 group-hover:scale-105 h-80"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1UtnH0B5mrJVJrnd62JLx3D-VhNrSEzIuth6dPtjuSNB3zKRrGLTCLqLq_zw-M9_EUU4I6BPLT5l6giLkPLasuLU5FPFHTVbqhjvO43SO2nWilU9c2iOYbxBuCPn17byY10HKYVCxRlTeMe5SLrKCfAfv08_gksalVJG5sOKaDu82H6cKOVRvozYB1YZLU3qTaFWczNlmnDSTSp9PNPPDBvmPtq4uVm49RqIi60HzzxbLjAbxEDVV2zEXA"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative py-32 bg-secondary overflow-hidden" id="why-us">
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop relative z-10"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="text-white">
+              <h2 class="font-headline-lg text-headline-lg mb-8">
+                Почему RenovAlsace Ваш лучший выбор
+              </h2>
+              <div
+                class="h-1.5 w-20 bg-primary-container rounded-full mb-8"
+              ></div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 items-start"
+              >
+                <div class="flex flex-col gap-4">
+                  <div
+                    class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white"
+                      data-icon="task_alt"
+                      >task_alt</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-headline-md text-body-md font-bold text-primary-fixed mb-1"
+                    >
+                      Один мастер - полный порядок!
+                    </h4>
+                    <p class="text-surface-bright/80 text-sm leading-relaxed">
+                      Вам не нужно искать строительную компанию и клининговую службу по отдельности. Мы возьмем на себя все с самого начала и до конца.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4 h-full">
+                  <div
+                    class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white"
+                      data-icon="cleaning_services"
+                      >cleaning_services</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-headline-md text-body-md font-bold text-primary-fixed mb-1"
+                    >
+                      Чистота на объекте
+                    </h4>
+                    <p class="text-surface-bright/80 text-sm leading-relaxed">
+                      Мы осуществляем уборку каждый день, а по завершении работы все помещения остаются безупречно чистыми и готовыми к использованию.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div
+                    class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white"
+                      data-icon="description"
+                      >description</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-headline-md text-body-md font-bold text-primary-fixed mb-1"
+                    >
+                      Прозрачная смета
+                    </h4>
+                    <p class="text-surface-bright/80 text-sm leading-relaxed">
+                      Бесплатный выезд на объект и составление сметы. Перед началом работ мы предоставляем предложение с фиксированной ценой без каких-либо дополнительных скрытых платежей.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div
+                    class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center shadow-lg"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white"
+                      data-icon="verified"
+                      >verified</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-headline-md text-body-md font-bold text-primary-fixed mb-1"
+                    >
+                      Пунктуальность и гарантия
+                    </h4>
+                    <p class="text-surface-bright/80 text-sm leading-relaxed">
+                      Мы выполняем работу в согласованные сроки и предоставляем гарантию на все выполненные профессиональные работы.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative lg:block hidden h-full">
+              <div
+                class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 group h-full"
+              >
+                <img
+                  alt="Skilled artisan working"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0XJN_LZJBjeqZyGR8ptgCpKxmBUgSBPqooX4qUpYii7bRgZgwn_suavlyUn_Feluq0axm47W6vPN7hU--j8ubsQmQb6stg-CJ7T7VHPnTGdO2ADHvJfKfKDrmyxljA_OmKPTK9hF8LUwT-P8FKD5qqlVkmOGKitPv4xMgD44t_MLLbexreYgvAEUeCbRBbXgUoas3SOlgFXMYp3aLJgidzpNzxszb3lMu9ts1-PrQXu0GNgUam7ewRi6GtTE4ke6uvvUqQnkrLD4WnQ"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex items-end p-8"
+                ></div>
+                <div
+                  class="absolute bottom-6 left-6 z-10 flex items-center gap-3 bg-primary-container px-4 py-2.5 rounded-2xl shadow-xl"
+                >
+                  <span
+                    class="text-4xl font-extrabold text-white font-headline-lg tracking-tight"
+                    >10+</span
+                  ><span
+                    class="text-xs uppercase font-bold tracking-wider text-white leading-tight"
+                    >лет<br />опыта</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-section-gap bg-surface-container-low" id="gallery">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div class="text-center mb-16">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+              Работы
+            </h2>
+            <div
+              class="h-1.5 w-20 bg-primary-container mx-auto rounded-full"
+            ></div>
+            <p class="text-secondary font-body-md mt-8">
+              Обзор наших работ в Эльзасе
+            </p>
+          </div>
+          <div
+            id="galleryTrack"
+            class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scroll-smooth"
+            aria-label="Project gallery"
+          >
+            <!-- Tile 1 -->
+            <div
+              data-gallery-slide
+              class="rounded-2xl overflow-hidden flex flex-col group cursor-pointer min-h-[460px] md:min-h-[520px] min-w-[340px] md:min-w-[460px] snap-center flex-shrink-0 shadow-md"
+              onclick="openLightbox(this)"
+            >
+              <div class="relative w-full h-full overflow-hidden">
+                <img
+                  alt="Premium Kitchen Setup"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBILvIUiQmfen0zLbN95SUPnlEnBwp1f1zR6HxpaPd9qeSGQY1kEj2Be1pIZHxiYvwLbrWBGVLSDdAZbrjPVVjE8DbVDriXeY-FAjjLl3B2l07m20Ugi6XyXr7rb-UDzkhhI8ZcXALwEpqBDCRS7UH2CI8xL1-dtCr8VFoZYFQ7NkKUe6Zzm6zHJuH9R4SF7IvprLNbucN-CTpI4_MFgQ-4Civ9iiVXTOMUS1EbrohBLb_AkORFV-HrDCo2OpROuWKsuVVX8YUCYTI"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-white text-4xl"
+                    >zoom_in</span
+                  >
+                </div>
+              </div>
+              <h4 class="hidden">Кухня</h4>
+            </div>
+            <!-- Tile 2 -->
+            <div
+              data-gallery-slide
+              class="rounded-2xl overflow-hidden flex flex-col group cursor-pointer min-h-[460px] md:min-h-[520px] min-w-[340px] md:min-w-[460px] snap-center flex-shrink-0 shadow-md"
+              onclick="openLightbox(this)"
+            >
+              <div class="relative w-full h-full overflow-hidden">
+                <img
+                  alt="Living Room Restoration"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9FoIjILKyyhqc_nJWMXyNPNIYhhyotBBvQgbcM6qZ6TJ46elKFb-K39Yr6xeR4Gld7fR6yNFWya-d4gX9E_8wl-OuasapXM9RmRkLkj8uaOW4Fs39Rp4-LXXNtjrkZr_MXnkehe2C1LzkbkldFxgT7DJTH_MDFn2MQxbiF9jUez1jZTvQaDjIsuMv_27nPxqkb1e9h3ghdeJ8CvmVie2F9NC8T5RV1LiQEL-lLPJnbFT6vfzunBFav-q1QTQ4pJ4CY8RR8j8Aels"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-white text-4xl"
+                    >zoom_in</span
+                  >
+                </div>
+              </div>
+              <h4 class="hidden">Гостинная</h4>
+            </div>
+            <!-- Tile 3 -->
+            <div
+              data-gallery-slide
+              class="rounded-2xl overflow-hidden flex flex-col group cursor-pointer min-h-[460px] md:min-h-[520px] min-w-[340px] md:min-w-[460px] snap-center flex-shrink-0 shadow-md"
+              onclick="openLightbox(this)"
+            >
+              <div class="relative w-full h-full overflow-hidden">
+                <img
+                  alt="Spa Bathroom Tiling"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjLIc_m2tDDJjss-SZz1j_qhXjb-COXn1oGGkW4XSygg1uJTFssLJ7mO-qKR2ByhWaLGYbEBS1aiug9wtbvYQLICZ-XWaFV_7z8cHt9Rypr80-Q6OBaXy5AikHPWWQzaVlf8zMqzFTIQf1dPAWxwpP2dJp_3b4HvopDvsPrK-iVXof7WTzRQptG5XahbOicU4AuqnH1howcyKCcZGAyTDbmBXk7pJ9Ss_Q61zyKPMWTiEcy0DwzX8Ypw-IvwgPmK1kayC7C8S3u_w"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-white text-4xl"
+                    >zoom_in</span
+                  >
+                </div>
+              </div>
+              <h4 class="hidden">Ванная комната</h4>
+            </div>
+            <!-- Tile 4 -->
+            <div
+              data-gallery-slide
+              class="rounded-2xl overflow-hidden flex flex-col group cursor-pointer min-h-[460px] md:min-h-[520px] min-w-[340px] md:min-w-[460px] snap-center flex-shrink-0 shadow-md"
+              onclick="openLightbox(this)"
+            >
+              <div class="relative w-full h-full overflow-hidden">
+                <img
+                  alt="Commercial Restoration"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBagBiwPMCe0afijwJfyPsFw8ONXLiwhZTe2dBCANOlEyjJ84TZDa8qO8KEip_c223c7Hgr2OGMarT9BZwJCcyhwWoPnYIHFvP0aqlcamfb0gvGd6LVYkfsWzSc5ptzsi9LHWCI0xrBbLQaYnDhsNzNqbYQhXnbGUuSpcsvZwv6ztHQnos2QAzaxsscr4k-O7bNnloVrthsrIREt4p_hkaY_K91OaRZyCrFrHf3nU_IWzowjBdF3oZOZ3fTdubNu_xkNze3giwg_BI"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-white text-4xl"
+                    >zoom_in</span
+                  >
+                </div>
+              </div>
+              <h4 class="hidden">Чистка мебели</h4>
+            </div>
+          </div>
+          <div
+            class="flex justify-center items-center gap-4 mt-8"
+            aria-label="Gallery controls"
+          >
+            <button
+              type="button"
+              id="galleryPrev"
+              aria-label="Previous project"
+              class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div
+              id="galleryDots"
+              class="flex items-center gap-2"
+              aria-label="Choose project"
+            >
+              <button
+                type="button"
+                aria-label="Show project 1"
+                aria-current="true"
+                class="w-8 h-1.5 rounded-full bg-primary-container"
+              ></button>
+              <button
+                type="button"
+                aria-label="Show project 2"
+                aria-current="false"
+                class="w-2 h-1.5 rounded-full bg-outline-variant/30"
+              ></button>
+              <button
+                type="button"
+                aria-label="Show project 3"
+                aria-current="false"
+                class="w-2 h-1.5 rounded-full bg-outline-variant/30"
+              ></button>
+              <button
+                type="button"
+                aria-label="Show project 4"
+                aria-current="false"
+                class="w-2 h-1.5 rounded-full bg-outline-variant/30"
+              ></button>
+            </div>
+            <button
+              type="button"
+              id="galleryNext"
+              aria-label="Next project"
+              class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Lightbox Modal -->
+      <div
+        class="modal"
+        id="galleryModal"
+        onclick="this.style.display = 'none'"
+        style="display: none"
+      >
+        <span
+          class="absolute top-10 right-10 text-white text-6xl cursor-pointer hover:text-primary-fixed transition-colors"
+          >×</span
+        >
+        <img
+          class="modal-content"
+          id="modalImage"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBILvIUiQmfen0zLbN95SUPnlEnBwp1f1zR6HxpaPd9qeSGQY1kEj2Be1pIZHxiYvwLbrWBGVLSDdAZbrjPVVjE8DbVDriXeY-FAjjLl3B2l07m20Ugi6XyXr7rb-UDzkhhI8ZcXALwEpqBDCRS7UH2CI8xL1-dtCr8VFoZYFQ7NkKUe6Zzm6zHJuH9R4SF7IvprLNbucN-CTpI4_MFgQ-4Civ9iiVXTOMUS1EbrohBLb_AkORFV-HrDCo2OpROuWKsuVVX8YUCYTI"
+        />
+        <div class="text-center text-white mt-8 px-4">
+          <h3 class="text-2xl font-bold" id="modalTitle">Кухня</h3>
+        </div>
+      </div>
+      <!-- Section 4: Why choose us -->
+
+      <!-- Section 5: Service Areas -->
+      <section
+        class="py-24 bg-secondary text-white relative overflow-hidden"
+        id="areas"
+      >
+        <div class="max-w-container-max mx-auto px-margin-desktop text-center">
+          <span
+            class="material-symbols-outlined text-primary-fixed text-6xl mb-6"
+            data-icon="map"
+            >map</span
+          >
+          <h2 class="font-headline-lg text-headline-lg mb-6 text-white">
+            Работаем по всему Эльзасу
+          </h2>
+          <p
+            class="font-body-lg text-body-lg text-surface-bright/90 max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            Страсбург, Кольмар, Мюлуз и прилегающие районы - по запросу. Мы выезжаем в любую часть региона, чтобы предоставить вам наши профессиональные услуги прямо у вас на месте.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-4">
+            <div
+              class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-headline-md text-body-md font-medium text-white shadow-sm flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+              Strasbourg
+            </div>
+            <div
+              class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-headline-md text-body-md font-medium text-white shadow-sm flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded-full bg-primary-fixed"></span> Colmar
+            </div>
+            <div
+              class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-headline-md text-body-md font-medium text-white shadow-sm flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+              Mulhouse
+            </div>
+            <div
+              class="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md font-headline-md text-body-md font-medium text-white shadow-sm flex items-center gap-2"
+            >
+              <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+              Obernai
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6: Enquiry Form -->
+      <section
+        class="py-section-gap bg-surface-container-low"
+        id="request-form"
+      >
+        <div class="max-w-4xl mx-auto px-margin-mobile">
+          <div
+            class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-outline-variant/20"
+          >
+            <div class="bg-primary-container p-10 text-white text-center">
+              <h2 class="font-headline-lg text-headline-lg mb-2">
+                Запросить смету
+              </h2>
+              <p class="opacity-90 font-medium">
+                Абсолютно бесплатно. Без обязательств. Ответ в течении 24 часов.
+              </p>
+            </div>
+            <form class="p-8 md:p-12 space-y-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="space-y-2">
+                  <label
+                    class="font-label-md text-label-md text-secondary uppercase tracking-wider"
+                    >Полное имя</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 rounded-xl border-outline-variant/50 focus:ring-primary focus:border-primary transition-all bg-surface-container-low"
+                    placeholder="Ваше имя"
+                    type="text"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="font-label-md text-label-md text-secondary uppercase tracking-wider"
+                    >Телефон</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 rounded-xl border-outline-variant/50 focus:ring-primary focus:border-primary transition-all bg-surface-container-low"
+                    placeholder="+33 0 00 00 00 00"
+                    type="tel"
+                  />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="font-label-md text-label-md text-secondary uppercase tracking-wider"
+                  >Email</label
+                >
+                <input
+                  class="w-full px-4 py-3 rounded-xl border-outline-variant/50 focus:ring-primary focus:border-primary transition-all bg-surface-container-low"
+                  placeholder="email@example.com"
+                  type="email"
+                />
+              </div>
+              <div class="space-y-4">
+                <label
+                  class="font-label-md text-label-md text-secondary uppercase tracking-wider block"
+                  >Необходимая услуга</label
+                >
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium">Сантехнические работы</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium">Покраска</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium">Укладка плитки</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium">Уборка</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium"
+                      >Химчистка</span
+                    >
+                  </label>
+                  <label
+                    class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-outline-variant/30 hover:bg-surface-container transition-colors"
+                  >
+                    <input
+                      class="rounded text-primary focus:ring-primary h-5 w-5"
+                      type="checkbox"
+                    />
+                    <span class="text-on-surface font-medium">Другие</span>
+                  </label>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="font-label-md text-label-md text-secondary uppercase tracking-wider"
+                  >Описание проекта</label
+                >
+                <textarea
+                  class="w-full px-4 py-3 rounded-xl border-outline-variant/50 focus:ring-primary focus:border-primary transition-all bg-surface-container-low"
+                  placeholder="Расскажите нам про Ваш проект..."
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="w-full bg-primary-container text-white py-5 rounded-xl font-headline-md text-headline-md hover:bg-primary transition-all shadow-xl active:scale-[0.98]"
+                type="submit"
+              >
+                Отправить запрос
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7: Contact Details -->
+      <section class="py-section-gap" id="contact">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div
+            class="grid grid-cols-1 gap-gutter text-center md:grid-cols-2 max-w-2xl mx-auto"
+          >
+            <div class="p-8 group">
+              <div
+                class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-fixed transition-colors"
+              >
+                <svg
+                  class="w-9 h-9 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  viewBox="0 0 24 24"
+                >
+                  <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Мы в Instagram
+              </h3>
+              <a
+                href="https://instagram.com/renovalsace"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-body-lg text-secondary font-bold hover:text-primary transition-colors block"
+                >@renovalsace</a
+              >
+            </div>
+            <div class="p-8 group">
+              <div
+                class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-fixed transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-4xl"
+                  data-icon="mail"
+                  >mail</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md mb-2">Email</h3>
+              <p class="text-body-lg text-secondary font-bold">
+                contact@renovalsace.fr
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-secondary text-white py-12 border-t border-white/10">
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop text-center space-y-4"
+      >
+        <div
+          class="font-headline-md text-2xl font-bold text-white tracking-tight"
+        >
+          RenovAlsace
+        </div>
+        <p class="text-surface-bright/80 font-body-md text-sm max-w-md mx-auto">
+          Ваш надежный партнер в сфере ремонта в Эльзасе
+        </p>
+        <div
+          class="w-12 h-1 bg-primary-container mx-auto rounded-full my-4"
+        ></div>
+        <div class="text-xs text-surface-bright/70 font-label-md">
+          © 2026 RenovAlsace. Все права защищены.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script>
+      // Scroll reveal animations and reading progress
+      document.documentElement.classList.add("js-motion");
+
+      const progressBar = document.createElement("div");
+      progressBar.id = "scrollProgress";
+      progressBar.setAttribute("aria-hidden", "true");
+      document.body.appendChild(progressBar);
+
+      const updateScrollProgress = () => {
+        const scrollable =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress =
+          scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+      };
+
+      const revealTargets = [
+        ...document.querySelectorAll(
+          "#services > div > div:first-child, #services .service-card-hover, #gallery > div > div:first-child, #why-us .grid.grid-cols-1 > div, #gallery .snap-center, #areas > div > *, #request-form > div, #contact .group",
+        ),
+      ];
+
+      revealTargets.forEach((element, index) => {
+        element.classList.add("reveal-on-scroll");
+        if (element.matches("#services .service-card-hover")) {
+          // Reveal service cards one by one after the section heading.
+          const cardIndex = [
+            ...document.querySelectorAll("#services .service-card-hover"),
+          ].indexOf(element);
+          element.style.setProperty(
+            "--reveal-delay",
+            `${(cardIndex + 1) * 110}ms`,
+          );
+        } else if (
+          element.matches(
+            "#gallery .snap-center, #why-us .grid.grid-cols-1 > div, #areas > div > *",
+          )
+        ) {
+          element.style.setProperty("--reveal-delay", `${(index % 6) * 90}ms`);
+        }
+      });
+
+      // Give the hero copy a subtle entrance on page load.
+      const heroContent = document.querySelector(
+        "main > section:first-child .max-w-2xl",
+      );
+      if (heroContent) {
+        heroContent.classList.add("hero-entrance");
+      }
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+        );
+
+        revealTargets.forEach((element) => revealObserver.observe(element));
+      } else {
+        revealTargets.forEach((element) => element.classList.add("is-visible"));
+      }
+
+      window.addEventListener("scroll", updateScrollProgress, {
+        passive: true,
+      });
+      window.addEventListener("resize", updateScrollProgress);
+      updateScrollProgress();
+
+      // Accessible mobile navigation toggle.
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+      const mobileNav = document.getElementById("mobileNav");
+      if (mobileMenuToggle && mobileNav) {
+        const closeMobileNav = () => {
+          mobileNav.classList.add("hidden");
+          mobileNav.classList.remove("flex");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+          mobileMenuToggle.setAttribute("aria-label", "Open navigation menu");
+          mobileMenuToggle.textContent = "menu";
+        };
+        mobileMenuToggle.addEventListener("click", () => {
+          const opening = mobileNav.classList.contains("hidden");
+          mobileNav.classList.toggle("hidden", !opening);
+          mobileNav.classList.toggle("flex", opening);
+          mobileMenuToggle.setAttribute("aria-expanded", String(opening));
+          mobileMenuToggle.setAttribute(
+            "aria-label",
+            opening ? "Close navigation menu" : "Open navigation menu",
+          );
+          mobileMenuToggle.textContent = opening ? "close" : "menu";
+        });
+        mobileNav
+          .querySelectorAll("a")
+          .forEach((link) => link.addEventListener("click", closeMobileNav));
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) closeMobileNav();
+        });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeMobileNav();
+        });
+      }
+
+      // Simple scroll behavior for header
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-md");
+          header.classList.remove("shadow-sm");
+        } else {
+          header.classList.add("shadow-sm");
+          header.classList.remove("shadow-md");
+        }
+      });
+
+      // Project gallery controls: scroll only the gallery track and keep dots in sync.
+      const galleryTrack = document.getElementById("galleryTrack");
+      if (galleryTrack) {
+        const gallerySlides = [
+          ...galleryTrack.querySelectorAll("[data-gallery-slide]"),
+        ];
+        const galleryDots = [
+          ...document.querySelectorAll("#galleryDots button"),
+        ];
+        let activeGalleryIndex = 0;
+        let galleryScrollTimer;
+
+        // Keep one pagination control per project card.
+        while (galleryDots.length > gallerySlides.length)
+          galleryDots.pop().remove();
+        while (galleryDots.length < gallerySlides.length) {
+          const dot = document.createElement("button");
+          const index = galleryDots.length;
+          dot.type = "button";
+          dot.setAttribute("aria-label", `Show project ${index + 1}`);
+          dot.className = "w-2 h-1.5 rounded-full bg-outline-variant/30";
+          document.getElementById("galleryDots").appendChild(dot);
+          galleryDots.push(dot);
+        }
+
+        const setActiveGalleryDot = (index) => {
+          activeGalleryIndex = index;
+          galleryDots.forEach((dot, i) => {
+            const active = i === index;
+            dot.setAttribute("aria-current", String(active));
+            dot.classList.toggle("bg-primary-container", active);
+            dot.classList.toggle("bg-outline-variant/30", !active);
+            dot.classList.toggle("w-8", active);
+            dot.classList.toggle("w-2", !active);
+          });
+        };
+
+        const goToGallerySlide = (index) => {
+          if (!gallerySlides.length) return;
+          const nextIndex =
+            (index + gallerySlides.length) % gallerySlides.length;
+          const slide = gallerySlides[nextIndex];
+          // Align each card to the track's left edge. This avoids scrollIntoView
+          // accidentally scrolling the whole page vertically.
+          const trackRect = galleryTrack.getBoundingClientRect();
+          const targetLeft =
+            galleryTrack.scrollLeft +
+            slide.getBoundingClientRect().left -
+            trackRect.left -
+            galleryTrack.clientLeft;
+          galleryTrack.scrollTo({ left: targetLeft, behavior: "smooth" });
+          setActiveGalleryDot(nextIndex);
+        };
+
+        document
+          .getElementById("galleryPrev")
+          ?.addEventListener("click", () =>
+            goToGallerySlide(activeGalleryIndex - 1),
+          );
+        document
+          .getElementById("galleryNext")
+          ?.addEventListener("click", () =>
+            goToGallerySlide(activeGalleryIndex + 1),
+          );
+        galleryDots.forEach((dot, i) =>
+          dot.addEventListener("click", () => goToGallerySlide(i)),
+        );
+
+        const syncGalleryIndex = () => {
+          // Pick the card whose left edge is closest to the track's left edge.
+          const trackLeft =
+            galleryTrack.getBoundingClientRect().left + galleryTrack.clientLeft;
+          let closest = 0;
+          let distance = Infinity;
+          gallerySlides.forEach((slide, i) => {
+            const d = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+            if (d < distance) {
+              distance = d;
+              closest = i;
+            }
+          });
+          setActiveGalleryDot(Math.min(closest, galleryDots.length - 1));
+        };
+
+        galleryTrack.addEventListener(
+          "scroll",
+          () => {
+            window.clearTimeout(galleryScrollTimer);
+            galleryScrollTimer = window.setTimeout(syncGalleryIndex, 100);
+          },
+          { passive: true },
+        );
+        window.addEventListener("resize", () =>
+          goToGallerySlide(activeGalleryIndex),
+        );
+        setActiveGalleryDot(0);
+      }
+
+      // Lightbox implementation
+      function openLightbox(element) {
+        const modal = document.getElementById("galleryModal");
+        const modalImg = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const img = element.querySelector("img");
+        const title = element.querySelector("h4").innerText;
+
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        modalTitle.innerText = title;
+      }
+
+      // Form handling simulation
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert(
+          "Thank you! Your request has been sent. Our team will contact you within 24 hours.",
+        );
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
